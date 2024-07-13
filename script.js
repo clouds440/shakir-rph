@@ -298,7 +298,7 @@ function timeSince(date) {
 }
 
 function loadData() {
-  fetch('/data')
+  fetch('data')
     .then(response => response.json())
     .then(data => {
       videoList = data.videos || [];
@@ -314,7 +314,7 @@ function saveData() {
     videos: videoList,
     articles: articleList
   };
-  fetch('/data', {
+  fetch('data', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
